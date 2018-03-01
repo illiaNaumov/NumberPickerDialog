@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setNumberPickerTextColor(numberPicker, Color.parseColor("#58b947"))
         setDividerColor(numberPicker, Color.parseColor("#b7b7b7"))
         numberPicker.maxValue = 10
 
@@ -39,31 +38,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
         }
-    }
-
-    private fun setNumberPickerTextColor(numberPicker: NumberPicker, color: Int): Boolean {
-        val count = numberPicker.childCount
-        for (i in 0 until count) {
-            val child = numberPicker.getChildAt(i)
-            if (child is EditText) {
-                try {
-                    val selectorWheelPaintField = numberPicker.javaClass
-                            .getDeclaredField("mSelectorWheelPaint")
-                    selectorWheelPaintField.isAccessible = true
-                    (selectorWheelPaintField.get(numberPicker) as Paint).color = color
-                    child.setTextColor(color)
-                    numberPicker.invalidate()
-                    return true
-                } catch (e: NoSuchFieldException) {
-                    Log.w("setNumberPickrTextColor", e)
-                } catch (e: IllegalAccessException) {
-                    Log.w("setNumberPickrTextColor", e)
-                } catch (e: IllegalArgumentException) {
-                    Log.w("setNumberPickrTextColor", e)
-                }
-            }
-        }
-        return false
     }
 
     private fun setDividerColor(picker: NumberPicker, color: Int) {

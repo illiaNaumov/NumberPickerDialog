@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="@+id/controlPanelView"
         app:layout_constraintTop_toTopOf="@+id/controlPanelView" />
 
-    <NumberPicker
+    <com.il_mov.numberpickerdialog.ColoredNumberPicker
         android:id="@+id/numberPicker"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
@@ -65,7 +65,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/controlPanelView" />
+        app:layout_constraintTop_toBottomOf="@+id/controlPanelView"
+        />
 
     <TextView
         android:id="@+id/textView"
