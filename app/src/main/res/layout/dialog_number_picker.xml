@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="@+id/controlPanelView"
         app:layout_constraintTop_toTopOf="@+id/controlPanelView" />
 
-    <com.il_mov.numberpickerdialog.ColoredNumberPicker
+    <com.shawnlin.numberpicker.NumberPicker
         android:id="@+id/numberPicker"
         android:layout_width="wrap_content"
         android:layout_height="180dp"
@@ -66,7 +66,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/controlPanelView"
-        />
+        app:np_dividerColor="@color/numberPickerDivider"
+        app:np_selectedTextColor="@color/numberPickerSelected"
+        app:np_selectedTextSize="@dimen/calculator_unit_text_size"
+        app:np_textColor="@color/numberPickerNotSelected"
+        app:np_textSize="@dimen/calculator_unit_text_size" />
 
     <TextView
         android:id="@+id/textView"
@@ -77,7 +81,7 @@
         android:layout_marginTop="8dp"
         android:text="шт."
         android:textColor="#c0c0c0"
-        android:textSize="18sp"
+        android:textSize="@dimen/calculator_unit_text_size"
         app:layout_constraintBottom_toBottomOf="@+id/numberPicker"
         app:layout_constraintStart_toEndOf="@+id/numberPicker"
         app:layout_constraintTop_toTopOf="@+id/numberPicker" />

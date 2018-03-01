@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="green">#58b947</color>
+    <color name="numberPickerSelected">#58b947</color>
+    <color name="numberPickerNotSelected">#b7b7b7</color>
+    <color name="numberPickerDivider">#b7b7b7</color>
 </resources>
