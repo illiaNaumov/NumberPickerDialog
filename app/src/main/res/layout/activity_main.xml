@@ -6,15 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/showPickerButtonView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show picker"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <include layout="@layout/dialog_number_picker" />
+        <TextView
+            android:id="@+id/showPickerButtonView"
+            android:layout_width="154dp"
+            android:layout_height="36dp"
+            android:drawableEnd="@drawable/vector_picker_arrows"
+            android:text="0 шт."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26"
+            android:gravity="center"
+            android:foregroundGravity="center"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="11dp"
+            android:textSize="14sp"
+            android:background="@drawable/bg_calculator_quantity"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <com.il_mov.numberpickerdialog.NumberPickerBottomDialog
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior" />
 </android.support.design.widget.CoordinatorLayout>

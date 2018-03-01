@@ -7,4 +7,5 @@
     <color name="numberPickerSelected">#58b947</color>
     <color name="numberPickerNotSelected">#b7b7b7</color>
     <color name="numberPickerDivider">#b7b7b7</color>
+    <color name="pickedNumberColor">#ebebeb</color>
 </resources>
